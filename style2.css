@@ -1,0 +1,927 @@
+/*CONFIGURACIÓN GENERAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #545454;
+    background-color: #FFFFFF;
+}
+
+/*HEADER*/
+header {
+    position: fixed;
+    
+    width: 100%; 
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 7%;
+    background-color: #FFF;
+    border-bottom: 2px solid #004AAD;
+}
+
+.btn-header {
+    background-color: #FF751F;
+    color: white;
+
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* LOGO */
+.logo {
+    width: 120px;
+    height: auto;
+    align-items: center;
+}
+
+
+/* MENÚ */
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 38px;
+
+    margin-left: auto;
+    margin-right: 45px;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #545454;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #004AAD;
+}
+
+
+/* CONTACTO ACTIVO */
+
+nav a.activo {
+    color: #004AAD;
+    font-weight: 600;
+}
+
+nav a.activo::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 3px;
+
+    background-color: #FF751F;
+
+    left: 0;
+    bottom: -10px;
+
+    border-radius: 5px;
+}
+
+
+/* BOTÓN PREINSCRIPCIÓN */
+
+.btn-preinscripcion {
+    background-color: #FF751F;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    padding: 14px 32px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-preinscripcion:hover {
+    background-color: #004AAD;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero-contacto {
+    min-height: 380px;
+
+    position: relative;
+
+    display: flex;
+
+    padding: 80px 6% 50px;
+
+    overflow: hidden;
+}
+
+
+/* TEXTO PRINCIPAL */
+
+.hero-texto {
+    position: relative;
+
+    z-index: 2;
+}
+
+.rayita {
+    width: 80px;
+    height: 5px;
+
+    background-color: #FF751F;
+
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+
+    transform: rotate(-5deg);
+}
+
+
+.hero-texto h1 {
+    font-family: 'Caveat', cursive;
+
+    font-size: 110px;
+
+    line-height: 0.9;
+
+    color: #004AAD;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+
+.hero-texto p {
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: #545454;
+}
+
+
+/* FRASE DERECHA */
+
+.hero-frase {
+    margin-left: auto;
+
+    margin-right: 8%;
+
+    margin-top: 70px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.hero-frase h2 {
+    font-family: 'Caveat', cursive;
+
+    font-size: 46px;
+
+    color: #004AAD;
+
+    font-weight: 600;
+
+    transform: rotate(-3deg);
+}
+
+.subrayado {
+    width: 270px;
+    height: 5px;
+
+    background-color: #FF751F;
+
+    margin: 5px auto;
+
+    border-radius: 10px;
+
+    transform: rotate(-4deg);
+}
+
+.hero-frase span {
+    display: block;
+
+    color: #FF751F;
+
+    font-size: 42px;
+
+    text-align: center;
+
+    margin-top: 3px;
+}
+
+
+/* DECORACIONES */
+
+.decoracion-izquierda {
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    background-color: #004AAD;
+
+    opacity: 0.08;
+
+    border-radius: 0 60px 60px 0;
+
+    left: -30px;
+    top: 0;
+}
+
+.decoracion-derecha {
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    background-color: #004AAD;
+
+    border-radius: 100px 0 0 100px;
+
+    right: -80px;
+    top: 0;
+}
+
+
+/* ================================
+   SECCIÓN CONTACTO
+================================ */
+
+.contacto {
+    width: 90%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.15fr;
+
+    gap: 50px;
+
+    padding: 35px 0 70px;
+}
+
+
+/* ================================
+   INFORMACIÓN
+================================ */
+
+.informacion {
+    border-right: 1px solid #bfc8d3;
+
+    padding-right: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.dato {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+}
+
+
+/* CÍRCULOS DE ICONOS */
+
+.icono {
+    min-width: 95px;
+    height: 95px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+
+    font-size: 36px;
+}
+
+.icono.azul {
+    background-color: #004AAD;
+}
+
+.icono.naranja {
+    background-color: #FF751F;
+}
+
+.icono.gris {
+    background-color: #545454;
+}
+
+
+/* TEXTOS */
+
+.dato h3 {
+    font-family: 'Caveat', cursive;
+
+    font-size: 31px;
+
+    color: #004AAD;
+
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+.dato p {
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    color: #545454;
+}
+
+
+/* TE ESPERAMOS */
+
+.esperamos {
+    text-align: center;
+
+    margin-top: 10px;
+}
+
+.esperamos h3 {
+    font-family: 'Caveat', cursive;
+
+    color: #004AAD;
+
+    font-size: 39px;
+
+    transform: rotate(-3deg);
+}
+
+.esperamos div {
+    width: 160px;
+    height: 4px;
+
+    background-color: #FF751F;
+
+    margin: 3px auto;
+
+    border-radius: 10px;
+
+    transform: rotate(-6deg);
+}
+
+
+/* ================================
+   FORMULARIO
+================================ */
+
+.formulario {
+    background-color: #f8f9fb;
+
+    border-radius: 22px;
+
+    padding: 30px 42px 35px;
+}
+
+.formulario h2 {
+    font-family: 'Caveat', cursive;
+
+    color: #004AAD;
+
+    font-size: 52px;
+
+    font-weight: 600;
+
+    margin-bottom: 0;
+}
+
+.texto-formulario {
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+
+    color: #545454;
+}
+
+
+/* LABEL */
+
+form label {
+    display: block;
+
+    font-size: 16px;
+
+    color: #545454;
+
+    margin-bottom: 7px;
+
+    margin-top: 16px;
+}
+
+
+/* INPUTS */
+
+form input,
+form textarea {
+    width: 100%;
+
+    border: 1px solid #b8c2ce;
+
+    border-radius: 10px;
+
+    padding: 14px 16px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    color: #545454;
+
+    background-color: #FFFFFF;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+form input {
+    height: 51px;
+}
+
+
+form textarea {
+    height: 125px;
+
+    resize: vertical;
+}
+
+
+/* CUANDO HACÉS CLICK */
+
+form input:focus,
+form textarea:focus {
+    border-color: #004AAD;
+
+    box-shadow: 0 0 0 3px rgba(0, 74, 173, 0.1);
+}
+
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #a9b2be;
+}
+
+
+/* BOTÓN */
+
+form button {
+    margin-top: 24px;
+
+    border: none;
+
+    background-color: #FF751F;
+
+    color: #FFFFFF;
+
+    padding: 14px 42px;
+
+    border-radius: 30px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+form button i {
+    margin-left: 12px;
+}
+
+form button:hover {
+    background-color: #004AAD;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   PARTE INFERIOR
+================================ */
+
+.final {
+    height: 250px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #FFFFFF;
+}
+
+
+/* FRASE */
+
+.frase-final {
+    position: absolute;
+
+    left: 7%;
+
+    top: 55px;
+
+    z-index: 5;
+}
+
+.frase-final p {
+    font-family: 'Caveat', cursive;
+
+    font-size: 27px;
+
+    color: #FFFFFF;
+
+    line-height: 1.1;
+}
+
+.linea-final {
+    width: 150px;
+
+    margin-top: 7px;
+
+    border-bottom: 3px solid #FF751F;
+
+    text-align: right;
+}
+
+.linea-final span {
+    color: #FF751F;
+
+    font-size: 25px;
+}
+
+
+/* MONTAÑAS */
+
+.montanas {
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    bottom: 0;
+}
+
+
+/* PRIMERA ONDA AZUL */
+
+.montana-1 {
+    position: absolute;
+
+    width: 120%;
+
+    height: 180px;
+
+    background-color: #004AAD;
+
+    bottom: -110px;
+
+    left: -10%;
+
+    border-radius: 50% 50% 0 0 / 45% 45% 0 0;
+
+    transform: rotate(-2deg);
+}
+
+
+/* SEGUNDA ONDA */
+
+.montana-2 {
+    position: absolute;
+
+    width: 110%;
+
+    height: 130px;
+
+    background-color: #0057b8;
+
+    bottom: -80px;
+
+    left: 25%;
+
+    border-radius: 50% 50% 0 0 / 50% 50% 0 0;
+
+    transform: rotate(2deg);
+}
+
+
+/* MONTAÑAS CENTRALES */
+
+.montana-2::before {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border-left: 130px solid transparent;
+    border-right: 130px solid transparent;
+    border-bottom: 100px solid #545454;
+
+    left: 25%;
+    bottom: 70px;
+}
+
+
+/* NIEVE */
+
+.montana-2::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 40px solid #FFFFFF;
+
+    left: calc(25% + 85px);
+    bottom: 120px;
+}
+
+
+/* SOL */
+
+.sol {
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    background-color: #FF751F;
+
+    border-radius: 50%;
+
+    left: 72%;
+
+    bottom: 110px;
+
+    z-index: 2;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    height: 100px;
+
+    background-color: #004AAD;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+
+.redes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.redes a {
+    color: #FFFFFF;
+
+    font-size: 25px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #FF751F;
+}
+
+.redes span {
+    color: #FFFFFF;
+
+    font-size: 20px;
+}
+
+
+footer p {
+    position: absolute;
+
+    right: 6%;
+
+    color: #FFFFFF;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   RESPONSIVE CELULAR
+================================ */
+
+@media (max-width: 900px) {
+
+    header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .logo img {
+        width: 240px;
+    }
+
+    nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin: 0;
+
+        gap: 20px;
+    }
+
+    .btn-preinscripcion {
+        padding: 11px 20px;
+    }
+
+
+    .hero-contacto {
+        flex-direction: column;
+
+        padding: 60px 8%;
+    }
+
+    .hero-texto h1 {
+        font-size: 80px;
+    }
+
+    .hero-texto p {
+        font-size: 17px;
+    }
+
+    .hero-frase {
+        margin: 40px 0 0;
+
+        text-align: center;
+    }
+
+    .hero-frase h2 {
+        font-size: 38px;
+    }
+
+
+    .contacto {
+        grid-template-columns: 1fr;
+
+        width: 90%;
+    }
+
+    .informacion {
+        border-right: none;
+
+        border-bottom: 1px solid #bfc8d3;
+
+        padding-right: 0;
+
+        padding-bottom: 40px;
+    }
+
+    .formulario {
+        padding: 30px 25px;
+    }
+
+
+    footer {
+        height: 120px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    footer p {
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .btn-preinscripcion {
+        font-size: 13px;
+    }
+
+    .hero-texto h1 {
+        font-size: 65px;
+    }
+
+    .hero-texto p br {
+        display: none;
+    }
+
+    .dato {
+        gap: 15px;
+    }
+
+    .icono {
+        min-width: 70px;
+        height: 70px;
+
+        font-size: 27px;
+    }
+
+    .dato h3 {
+        font-size: 26px;
+    }
+
+    .dato p {
+        font-size: 14px;
+    }
+
+    .formulario h2 {
+        font-size: 45px;
+    }
+
+    .frase-final {
+        left: 5%;
+    }
+
+}
